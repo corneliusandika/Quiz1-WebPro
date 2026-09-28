@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Project Report — Personal Website Kota Madiun</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: #23262b; font-size: 10.5pt; line-height: 1.62; margin: 0;
+  }
+  h1, h2, h3, h4 { line-height: 1.28; margin: 0; }
+  p { margin: 0 0 8pt; text-align: justify; }
+  ul, ol { margin: 0 0 9pt; padding-left: 16pt; }
+  li { margin-bottom: 3pt; }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace; font-size: 9.4pt;
+    background: #f1efe9; padding: 1px 4px; border-radius: 3px; color: #9c4405;
+  }
+  pre {
+    font-family: 'Consolas', 'Courier New', monospace; font-size: 8.6pt; line-height: 1.45;
+    background: #1b1d22; color: #e6e6e6; padding: 9pt 11pt; border-radius: 6px;
+    overflow-wrap: break-word; white-space: pre-wrap; margin: 0 0 10pt;
+  }
+  pre .c { color: #8fbf7f; }
+  pre .k { color: #ffb37e; }
+  table { width: 100%; border-collapse: collapse; margin: 0 0 10pt; font-size: 9.6pt; }
+  th, td { border: 1px solid #d8d5cf; padding: 5pt 7pt; text-align: left; vertical-align: top; }
+  th { background: #f1efe9; font-weight: 600; }
+  figure { margin: 0 0 12pt; page-break-inside: avoid; text-align: center; }
+  figure img { width: 100%; border: 1px solid #ddd; border-radius: 5px; }
+  figcaption { font-size: 9pt; color: #6b6f76; margin-top: 4pt; text-align: center; }
+  table.plain { border: none; margin: 0 auto; }
+  table.plain td { border: none; padding: 0; vertical-align: top; }
+  .mob-row td { padding: 0 5mm; }
+  .mob-row figure { margin: 0; }
+  .mob-row img { width: 74mm; }
+
+  /* Cover */
+  table.cover { width: 100%; height: 248mm; border: none; margin: 0; text-align: center; page-break-after: always; }
+  table.cover td { border: none; padding: 0; text-align: center; vertical-align: middle; }
+  .cover .tag { display: inline-block; background: rgba(232,89,12,.12); color: #c94a08; font-weight: 700;
+    padding: 3pt 14pt; border-radius: 20pt; font-size: 9pt; letter-spacing: 1.2px; text-transform: uppercase; }
+  .cover h1 { font-size: 25pt; margin: 14pt 0 6pt; }
+  .cover h2 { font-size: 13pt; color: #6b6f76; font-weight: 500; margin-bottom: 26pt; }
+  .cover .rule { width: 70mm; height: 3px; background: #e8590c; margin: 0 auto 26pt; }
+  .cover .who { font-size: 12pt; line-height: 2; }
+  .cover .who b { font-size: 14pt; }
+  .fillme { background: #fff3bf; padding: 0 6px; border-radius: 3px; }
+
+  h2.chapter {
+    font-size: 15pt; color: #c94a08; border-bottom: 2px solid #e8590c;
+    padding-bottom: 5pt; margin: 0 0 12pt; page-break-before: always; page-break-after: avoid;
+  }
+  h2.chapter.first { page-break-before: avoid; }
+  h3 { font-size: 11.6pt; margin: 14pt 0 6pt; color: #14161a; page-break-after: avoid; }
+  h4 { font-size: 10.5pt; margin: 11pt 0 5pt; color: #14161a; page-break-after: avoid; }
+
+  .box { background: #f7f5f1; border-left: 3px solid #e8590c; padding: 8pt 11pt; border-radius: 0 5px 5px 0; margin: 0 0 10pt; }
+  .box p:last-child, .box ul:last-child { margin-bottom: 0; }
+  table.swatches { border: none; margin: 0 0 11pt; }
+  table.swatches td { border: none; padding: 0 3pt; width: 20%; vertical-align: top; }
+  .sw { border: 1px solid #ddd; border-radius: 5px; overflow: hidden; font-size: 8.6pt; }
+  .sw .chip { height: 22mm; }
+  .sw .lbl { padding: 4pt 6pt; }
+  .sw .lbl b { display: block; font-size: 9pt; }
+  .toc li { margin-bottom: 4pt; }
+  .toc { list-style: none; padding-left: 0; }
+  .toc .n { display: inline-block; width: 14mm; color: #c94a08; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<table class="cover"><tr><td>
+  <div><span class="tag">Project Report</span></div>
+  <h1>Personal Website Kota Madiun</h1>
+  <div class="rule"></div>
+  <h2>Website statis multi-halaman berbasis HTML, CSS, JavaScript,<br>Bootstrap, dan jQuery</h2>
+  <div class="who">
+    Disusun oleh:<br>
+    <b>Cornelius Andika</b><br>
+    NRP: <span class="fillme">................</span><br>
+    Kelas: <span class="fillme">................</span><br><br>
+    Mata Kuliah: <span class="fillme">Pemrograman Web</span><br>
+    <span class="fillme">Departemen Teknik Informatika</span><br>
+    <span class="fillme">Institut Teknologi Sepuluh Nopember</span><br>
+    Tahun 2026
+  </div>
+</td></tr></table>
+
+<!-- ============ DAFTAR ISI ============ -->
+<h2 class="chapter first">Daftar Isi</h2>
+<ol class="toc">
+  <li><span class="n">1</span> Pendahuluan</li>
+  <li><span class="n">2</span> Konsep Desain dan Struktur Website</li>
+  <li><span class="n">3</span> Dokumentasi Tampilan (Screenshot)</li>
+  <li><span class="n">4</span> Penjelasan Kode dan Pilihan Implementasi</li>
+  <li><span class="n">5</span> Analisis dan Evaluasi Proyek</li>
+  <li><span class="n">6</span> Kesimpulan</li>
+  <li><span class="n">7</span> Lampiran</li>
+</ol>
+
+<!-- ============ 1 ============ -->
+<h2 class="chapter">1 &nbsp;Pendahuluan</h2>
+
+<h3>1.1 Latar Belakang</h3>
+<p>Tugas ini meminta pembuatan sebuah <em>personal website</em> statis yang memperkenalkan diri penulis sekaligus kota asal penulis, yaitu <strong>Kota Madiun</strong>. Website dibangun hanya dengan HTML, CSS, dan JavaScript, dengan bantuan library jQuery serta framework Bootstrap untuk mempercepat pembuatan layout dan komponen antarmuka.</p>
+<p>Kota Madiun dipilih karena memiliki identitas lokal yang kuat dan mudah dikemas menjadi konten: julukan <em>Kota Pendekar</em>, kuliner legendaris seperti pecel dan brem, serta sejumlah ruang publik yang menjadi ikon kota. Materi tersebut dibagi menjadi lima halaman agar penyajiannya fokus dan tidak menumpuk dalam satu halaman panjang.</p>
+
+<h3>1.2 Tujuan</h3>
+<ul>
+  <li>Menerapkan HTML semantik, CSS, dan JavaScript dalam satu proyek nyata.</li>
+  <li>Mengimplementasikan layout responsif memakai sistem grid Bootstrap 5.</li>
+  <li>Menerapkan manipulasi DOM dan animasi memakai jQuery.</li>
+  <li>Menerapkan struktur URL yang rapi (<em>clean URL</em>) untuk setiap halaman.</li>
+  <li>Mendeploy hasil proyek ke layanan hosting statis (Vercel) dan menyimpan kode di GitHub.</li>
+</ul>
+
+<h3>1.3 Batasan</h3>
+<ul>
+  <li>Website bersifat statis tanpa basis data maupun sisi server; seluruh konten ditulis langsung di HTML.</li>
+  <li>Hanya berisi lima halaman sesuai ketentuan tugas: Dashboard, Profile, Hometown, Local Food, dan Tourist Places.</li>
+  <li>Bootstrap dan jQuery dimuat melalui CDN sehingga memerlukan koneksi internet saat diakses.</li>
+</ul>
+
+<!-- ============ 2 ============ -->
+<h2 class="chapter">2 &nbsp;Konsep Desain dan Struktur Website</h2>
+
+<h3>2.1 Konsep Desain</h3>
+<p>Konsep yang diangkat adalah <strong>“hangat, lokal, dan bersih”</strong>. Karena Madiun dikenal lewat kulinernya, warna aksen yang dipakai adalah oranye bara (<em>burnt orange</em>) di atas latar netral gelap pada bagian <em>header</em>, dan latar krem terang pada bagian konten. Kombinasi ini membuat foto makanan dan foto wisata tampil menonjol, sekaligus menjaga kesan hangat khas kota kecil.</p>
+<p>Tiga prinsip desain yang dipegang:</p>
+<ol>
+  <li><strong>Konsisten.</strong> Semua halaman memakai navbar dan footer yang identik, serta pola judul yang sama (<em>badge</em> kecil &rarr; judul &rarr; deskripsi singkat).</li>
+  <li><strong>Fokus satu pesan per halaman.</strong> Setiap halaman membahas satu topik sehingga pengunjung tidak perlu menggulir terlalu jauh.</li>
+  <li><strong>Ramah perangkat mobile.</strong> Tata letak menyusun ulang secara otomatis dari satu kolom (ponsel) menjadi dua–empat kolom (desktop).</li>
+</ol>
+
+<h4>Palet warna</h4>
+<table class="swatches"><tr>
+  <td><div class="sw"><div class="chip" style="background:#e8590c"></div><div class="lbl"><b>#e8590c</b>Aksen utama</div></div></td>
+  <td><div class="sw"><div class="chip" style="background:#c94a08"></div><div class="lbl"><b>#c94a08</b>Aksen gelap (hover)</div></div></td>
+  <td><div class="sw"><div class="chip" style="background:#14161a"></div><div class="lbl"><b>#14161a</b>Latar gelap</div></div></td>
+  <td><div class="sw"><div class="chip" style="background:#f6f4ef"></div><div class="lbl"><b>#f6f4ef</b>Latar terang</div></div></td>
+  <td><div class="sw"><div class="chip" style="background:#ffffff"></div><div class="lbl"><b>#ffffff</b>Kartu</div></div></td>
+</tr></table>
+<p>Seluruh nilai warna disimpan sebagai <em>CSS custom property</em> pada <code>:root</code> sehingga perubahan tema cukup dilakukan di satu tempat.</p>
+
+<h4>Tipografi</h4>
+<p>Font yang dipakai adalah <em>system font stack</em> <code>'Segoe UI', system-ui, sans-serif</code>. Pilihan ini membuat halaman tetap terasa “asli” pada setiap sistem operasi, tidak menambah permintaan jaringan, dan menjaga kecepatan muat. Hierarki visual dibentuk lewat perbedaan ukuran dan ketebalan, bukan lewat banyak jenis huruf.</p>
+
+<h3>2.2 Struktur Direktori</h3>
+<p>Struktur folder dirancang menyerupai struktur URL. Setiap halaman menempati foldernya sendiri dan diberi nama berkas <code>index.html</code>, sehingga URL yang dihasilkan bersih tanpa ekstensi.</p>
+<pre>personal-website/
+├─ quiz1/
+│  ├─ index.html            <span class="c">&larr; /quiz1  (Dashboard)</span>
+│  ├─ profile/index.html    <span class="c">&larr; /quiz1/profile</span>
+│  ├─ hometown/index.html   <span class="c">&larr; /quiz1/hometown</span>
+│  ├─ food/index.html       <span class="c">&larr; /quiz1/food</span>
+│  ├─ tourist/index.html    <span class="c">&larr; /quiz1/tourist</span>
+│  ├─ css/style.css         <span class="c">&larr; gaya kustom (1 berkas, dipakai bersama)</span>
+│  ├─ js/script.js          <span class="c">&larr; interaksi jQuery (1 berkas, dipakai bersama)</span>
+│  └─ images/               <span class="c">&larr; 14 foto: profil, kuliner, wisata</span>
+├─ report/                  <span class="c">&larr; berkas laporan ini</span>
+├─ vercel.json              <span class="c">&larr; konfigurasi routing saat deploy</span>
+└─ start.bat                <span class="c">&larr; pembantu menjalankan server lokal</span></pre>
+<p>Satu berkas CSS dan satu berkas JavaScript dipakai oleh kelima halaman. Pendekatan ini menghindari duplikasi kode dan membuat perbaikan tampilan cukup dilakukan sekali.</p>
+
+<h3>2.3 Peta Halaman dan URL</h3>
+<table>
+  <tr><th style="width:38%">URL</th><th style="width:22%">Halaman</th><th>Isi utama</th></tr>
+  <tr><td><code>/quiz1</code></td><td>Dashboard</td><td>Perkenalan singkat, foto profil, statistik, dan kartu navigasi ke empat halaman lain</td></tr>
+  <tr><td><code>/quiz1/profile</code></td><td>Profile</td><td>Biodata, riwayat pendidikan, indikator keahlian, dan tombol hubungi via WhatsApp</td></tr>
+  <tr><td><code>/quiz1/hometown</code></td><td>Hometown</td><td>Deskripsi Kota Madiun, julukan kota, dan data ringkas wilayah</td></tr>
+  <tr><td><code>/quiz1/food</code></td><td>Local Food</td><td>Enam kuliner khas dengan filter kategori dan rentang harga</td></tr>
+  <tr><td><code>/quiz1/tourist</code></td><td>Tourist Places</td><td>Enam destinasi wisata dengan jendela detail (<em>modal</em>)</td></tr>
+</table>
+
+<h3>2.4 Alur Navigasi</h3>
+<p>Navigasi memakai pola <em>hub-and-spoke</em>: Dashboard berperan sebagai pusat, dan keempat halaman lain dapat dijangkau langsung dari navbar di halaman mana pun. Setiap sub-halaman juga menampilkan <em>breadcrumb</em> (misalnya <em>Dashboard / Local Food</em>) agar posisi pengunjung selalu jelas. Halaman Hometown menambahkan tombol pintas menuju halaman kuliner dan wisata sebagai penghubung antar-topik yang berdekatan.</p>
+
+<!-- ============ 3 ============ -->
+<h2 class="chapter">3 &nbsp;Dokumentasi Tampilan (Screenshot)</h2>
+<p>Seluruh tangkapan layar di bawah ini diambil dari website yang dijalankan langsung, pada lebar jendela 1440 px untuk tampilan desktop. Ukuran gambar disesuaikan penuh (<em>full page</em>), sehingga memperlihatkan keseluruhan isi setiap halaman.</p>
+
+<figure>
+  <img src="screenshots/01-dashboard.jpg" alt="Screenshot Dashboard">
+  <figcaption>Gambar 3.1 — Dashboard (<code>/quiz1</code>): bagian pembuka dengan efek ketik, statistik berjalan, dan kartu navigasi.</figcaption>
+</figure>
+
+<h3>3.1 Halaman Profile</h3>
+<figure>
+  <img src="screenshots/02-profile.jpg" alt="Screenshot Profile">
+  <figcaption>Gambar 3.2 — Profile (<code>/quiz1/profile</code>): kartu identitas, biodata, riwayat pendidikan, dan indikator keahlian.</figcaption>
+</figure>
+
+<h3>3.2 Halaman Hometown</h3>
+<figure>
+  <img src="screenshots/03-hometown.jpg" alt="Screenshot Hometown">
+  <figcaption>Gambar 3.3 — Hometown (<code>/quiz1/hometown</code>): deskripsi Kota Madiun, data ringkas wilayah, dan kartu julukan kota.</figcaption>
+</figure>
+
+<h3>3.3 Halaman Local Food</h3>
+<figure>
+  <img src="screenshots/04-food.jpg" alt="Screenshot Local Food">
+  <figcaption>Gambar 3.4 — Local Food (<code>/quiz1/food</code>): enam kuliner khas dalam grid kartu, lengkap dengan tombol filter kategori.</figcaption>
+</figure>
+
+<h3>3.4 Halaman Tourist Places</h3>
+<figure>
+  <img src="screenshots/05-tourist.jpg" alt="Screenshot Tourist Places">
+  <figcaption>Gambar 3.5 — Tourist Places (<code>/quiz1/tourist</code>): enam destinasi wisata; setiap kartu dapat diklik untuk membuka detail.</figcaption>
+</figure>
+
+<h3>3.5 Tampilan Mobile</h3>
+<p>Tangkapan layar berikut diambil pada lebar 390 px (setara layar ponsel) untuk membuktikan bahwa tata letak menyesuaikan diri dengan baik.</p>
+<table class="plain mob-row"><tr>
+  <td>
+  <figure>
+    <img src="screenshots/06-mobile-dashboard.jpg" alt="Screenshot mobile dashboard">
+    <figcaption>Gambar 3.6 — Dashboard pada ponsel: menu berubah menjadi tombol <em>hamburger</em> dan tata letak menjadi satu kolom.</figcaption>
+  </figure>
+  </td>
+  <td>
+  <figure>
+    <img src="screenshots/07-mobile-food.jpg" alt="Screenshot mobile local food">
+    <figcaption>Gambar 3.7 — Local Food pada ponsel: kartu tersusun satu kolom dan tombol filter membagi lebar secara merata.</figcaption>
+  </figure>
+  </td>
+</tr></table>
+
+<!-- ============ 4 ============ -->
+<h2 class="chapter">4 &nbsp;Penjelasan Kode dan Pilihan Implementasi</h2>
+
+<h3>4.1 HTML: Struktur Semantik dan Komponen Bootstrap</h3>
+<p>Setiap halaman memakai kerangka yang sama: <code>&lt;nav&gt;</code> untuk navigasi, <code>&lt;header&gt;</code> untuk bagian pembuka, satu atau lebih <code>&lt;section&gt;</code> untuk isi, dan <code>&lt;footer&gt;</code> untuk penutup. Tag semantik ini membantu mesin pencari dan pembaca layar memahami bagian halaman.</p>
+<p>Lima halaman itu berbagi navbar yang sama. Hanya penanda <code>active</code> yang berpindah sesuai halaman yang sedang dibuka:</p>
+<pre><span class="k">&lt;nav</span> id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top"<span class="k">&gt;</span>
+  <span class="k">&lt;div</span> class="container"<span class="k">&gt;</span>
+    <span class="k">&lt;a</span> class="navbar-brand fw-bold" href="./"<span class="k">&gt;</span>...<span class="k">&lt;/a&gt;</span>
+    <span class="k">&lt;button</span> class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"<span class="k">&gt;</span>
+    <span class="k">&lt;div</span> class="collapse navbar-collapse" id="navMenu"<span class="k">&gt;</span>
+      <span class="k">&lt;ul</span> class="navbar-nav ms-auto"<span class="k">&gt;</span>
+        <span class="k">&lt;li&gt;&lt;a</span> class="nav-link active" href="./"<span class="k">&gt;</span>Dashboard<span class="k">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="k">&lt;li&gt;&lt;a</span> class="nav-link" href="profile/"<span class="k">&gt;</span>Profile<span class="k">&lt;/a&gt;&lt;/li&gt;</span>
+        ...</pre>
+<p>Kelas <code>navbar-expand-lg</code> adalah kunci keramahan mobile: di atas lebar 992 px menu tampil mendatar, sedangkan di bawahnya menu otomatis terlipat menjadi tombol <em>hamburger</em>.</p>
+
+<h4>Grid responsif</h4>
+<p>Isi halaman disusun memakai sistem 12 kolom Bootstrap. Sebagai contoh, pada halaman Local Food setiap kartu memakai <code>col-md-6 col-lg-4</code>:</p>
+<pre><span class="k">&lt;div</span> class="row g-4"<span class="k">&gt;</span>
+  <span class="k">&lt;div</span> class="col-md-6 col-lg-4 reveal food-item" data-cat="berat"<span class="k">&gt;</span> ... <span class="k">&lt;/div&gt;</span>
+  ...
+<span class="k">&lt;/div&gt;</span></pre>
+<p>Artinya: satu kartu per baris pada ponsel, dua kartu per baris pada tablet (<code>md</code>), dan tiga kartu per baris pada desktop (<code>lg</code>). Kelas <code>g-4</code> memberi jarak antar-kolom secara otomatis.</p>
+
+<h3>4.2 CSS: Satu Berkas Gaya untuk Semua Halaman</h3>
+<p>Berkas <code>quiz1/css/style.css</code> (114 baris) hanya berisi gaya tambahan di atas Bootstrap, dengan urutan: variabel tema, komponen per bagian, lalu aturan responsif.</p>
+
+<h4>Variabel tema</h4>
+<pre>:root {
+  --accent: #e8590c;      <span class="c">/* oranye bara */</span>
+  --accent-dark: #c94a08;
+  --dark: #14161a;
+  --muted-bg: #f6f4ef;
+}</pre>
+
+<h4>Animasi kemunculan saat digulir</h4>
+<p>Elemen bertanda kelas <code>reveal</code> mulai dari keadaan transparan dan bergeser sedikit ke bawah, lalu menjadi normal ketika kelas <code>visible</code> ditambahkan oleh JavaScript.</p>
+<pre>.reveal { opacity: 0; transform: translateY(30px); transition: all .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }</pre>
+<div class="box">
+  <p><strong>Pilihan implementasi:</strong> karena efek ini bergantung pada JavaScript, ditambahkan pengaman <code>&lt;noscript&gt;</code> di setiap halaman yang langsung menampilkan seluruh elemen. Tanpa pengaman ini, isi halaman akan tidak terlihat bila JavaScript gagal dimuat.</p>
+</div>
+
+<h4>Foto profil yang tidak terpotong</h4>
+<p>Agar foto profil tampil utuh tanpa terpotong, tinggi gambar tidak dipatok dan rasio asli dipertahankan:</p>
+<pre>.hero-img { width: 100%; height: auto; display: block; }
+.profile-card img { width: 100%; height: auto; display: block; }</pre>
+<p>Sebaliknya, foto kuliner dan wisata sengaja dipangkas seragam memakai <code>height: 200px; object-fit: cover;</code> supaya tinggi kartu konsisten dan grid tetap rapi.</p>
+
+<h4>Media query</h4>
+<p>Ada dua titik henti (<em>breakpoint</em>) tambahan: <code>max-width: 991.98px</code> untuk tablet dan <code>max-width: 575.98px</code> untuk ponsel. Pada ponsel, ukuran huruf judul diperkecil, tombol menjadi selebar penuh, dan tombol filter dibagi rata:</p>
+<pre>@media (max-width: 575.98px) {
+  .hero .display-4 { font-size: 1.75rem; }
+  .hero .btn-lg { width: 100%; }
+  .filter-group .btn-filter { flex: 1 1 auto; padding: 8px 10px; }
+}</pre>
+
+<h3>4.3 JavaScript dan jQuery: Delapan Interaksi</h3>
+<p>Berkas <code>quiz1/js/script.js</code> (55 baris) dibungkus dalam <code>$(function () { ... })</code> sehingga seluruh kode berjalan setelah dokumen siap. Berikut fungsi-fungsi yang dijalankan.</p>
+
+<h4>(a) Efek ketik pada Dashboard</h4>
+<p>Kalimat “Saya seorang …” diisi bergantian dari sebuah daftar kata. Teks ditampilkan karakter demi karakter, lalu dihapus, lalu lanjut ke kata berikutnya.</p>
+<pre><span class="k">var</span> words = ['Web Developer', 'Mahasiswa Informatika', 'Warga Madiun', 'Pecinta Pecel'];
+<span class="k">var</span> wi = 0, ci = 0, deleting = false;
+(<span class="k">function</span> type() {
+  <span class="k">var</span> word = words[wi];
+  $('#typed').text(word.slice(0, ci));
+  <span class="k">if</span> (!deleting) { ci++; <span class="k">if</span> (ci &gt; word.length) { deleting = <span class="k">true</span>; <span class="k">return</span> setTimeout(type, 1500); } }
+  <span class="k">else</span> { ci--; <span class="k">if</span> (ci === 0) { deleting = <span class="k">false</span>; wi = (wi + 1) % words.length; } }
+  setTimeout(type, deleting ? 50 : 110);
+})();</pre>
+<p>Blok ini hanya dijalankan bila elemen <code>#typed</code> ada (<code>if ($('#typed').length)</code>). Karena elemen itu hanya ada di Dashboard, berkas JavaScript yang sama tetap aman dipakai di halaman lain.</p>
+
+<h4>(b) Angka statistik yang berjalan</h4>
+<pre>$('.counter').each(<span class="k">function</span> () {
+  <span class="k">var</span> $el = $(this), target = +$el.data('target'), done = <span class="k">false</span>;
+  <span class="k">function</span> check() {
+    <span class="k">if</span> (!done &amp;&amp; $el.offset().top &lt; $(window).scrollTop() + $(window).height()) {
+      done = <span class="k">true</span>;
+      $({ n: 0 }).animate({ n: target }, { duration: 1200,
+        step: <span class="k">function</span> (v) { $el.text(Math.round(v)); } });
+    }
+  }
+  $(window).on('scroll', check); check();
+});</pre>
+<p>Nilai target dibaca dari atribut <code>data-target</code> di HTML, sehingga untuk mengubah angka cukup mengubah HTML tanpa menyentuh JavaScript. Animasi angka memanfaatkan <code>$.animate</code> pada objek kosong &mdash; teknik jQuery untuk menganimasikan nilai non-CSS.</p>
+
+<h4>(c) Filter kategori kuliner</h4>
+<pre>$('.btn-filter').on('click', <span class="k">function</span> () {
+  $('.btn-filter').removeClass('active'); $(this).addClass('active');
+  <span class="k">var</span> f = $(this).data('filter');
+  $('.food-item').each(<span class="k">function</span> () {
+    <span class="k">var</span> show = f === 'all' || $(this).data('cat') === f;
+    <span class="k">if</span> (show) $(this).fadeIn(300); <span class="k">else</span> $(this).fadeOut(300);
+  });
+});</pre>
+<p>Kategori setiap makanan disimpan pada atribut <code>data-cat</code>, dan tombol menyimpan pilihannya pada <code>data-filter</code>. Pendekatan ini membuat penambahan menu baru tidak memerlukan perubahan kode sama sekali &mdash; cukup tulis kartu baru dengan atribut yang sesuai.</p>
+
+<h4>(d) Modal detail wisata</h4>
+<pre>$('.place-card').on('click', <span class="k">function</span> () {
+  $('#placeModalTitle').text($(this).data('title'));
+  $('#placeModalDesc').text($(this).data('desc'));
+});</pre>
+<p>Judul dan deskripsi destinasi disimpan di atribut <code>data-title</code> dan <code>data-desc</code> pada tiap kartu. Saat kartu diklik, isi modal diganti sesuai kartu tersebut. Modal dibuka oleh atribut <code>data-bs-toggle="modal"</code> milik Bootstrap.</p>
+
+<h4>(e) Animasi kemunculan saat digulir</h4>
+<pre><span class="k">function</span> reveal() {
+  $('.reveal').each(<span class="k">function</span> () {
+    <span class="k">if</span> ($(this).offset().top &lt; $(window).scrollTop() + $(window).height() - 60)
+      $(this).addClass('visible');
+  });
+}
+$(window).on('scroll', reveal); reveal();</pre>
+
+<h4>(f) Tombol kembali ke atas</h4>
+<pre>$(window).on('scroll', <span class="k">function</span> () { $('#backTop').toggle($(this).scrollTop() &gt; 400); });
+$('#backTop').on('click', <span class="k">function</span> () { $('html, body').animate({ scrollTop: 0 }, 700); });</pre>
+<p>Tombol ini baru muncul setelah pengunjung menggulir lebih dari 400 px, dan memakai animasi gulir halus.</p>
+
+<h4>(g) Menu mobile yang menutup sendiri</h4>
+<pre>$('#navMenu .nav-link').on('click', <span class="k">function</span> () {
+  <span class="k">var</span> nav = document.getElementById('navMenu');
+  <span class="k">var</span> toggler = document.querySelector('.navbar-toggler');
+  <span class="k">if</span> (toggler &amp;&amp; window.getComputedStyle(toggler).display !== 'none' &amp;&amp; nav.classList.contains('show')) {
+    <span class="k">var</span> c = bootstrap.Collapse.getInstance(nav) || <span class="k">new</span> bootstrap.Collapse(nav, { toggle: <span class="k">false</span> });
+    c.hide();
+  }
+});</pre>
+<div class="box">
+  <p><strong>Catatan revisi:</strong> versi awal memakai <code>$('.navbar-collapse').collapse('hide')</code>. Cara itu <em>tidak berfungsi</em> karena Bootstrap 5 sudah menghapus antarmuka <em>plugin</em> jQuery-nya, sehingga muncul galat <em>“collapse is not a function”</em> dan menu mobile tidak menutup. Perbaikan dilakukan dengan memakai API resmi <code>bootstrap.Collapse</code>.</p>
+</div>
+
+<h4>(h) Tahun berjalan pada footer</h4>
+<pre>$('#year').text(<span class="k">new</span> Date().getFullYear());</pre>
+<p>Dengan cara ini tahun hak cipta tidak perlu diperbarui manual setiap tahun.</p>
+
+<h3>4.4 Routing: URL Bersih Tanpa Ekstensi</h3>
+<p>Agar URL berbentuk <code>/quiz1/food</code> dan bukan <code>/quiz1/food/index.html</code>, dipakai pola <em>folder + index.html</em>. Server web yang menyajikan folder akan mencari berkas <code>index.html</code> di dalamnya secara otomatis. Karena itulah setiap halaman diberi foldernya sendiri dengan nama berkas <code>index.html</code>.</p>
+<p>Pada halaman lain, tautan ditulis relatif agar konsisten di semua kedalaman folder:</p>
+<pre><span class="c">&lt;!-- dari /quiz1/ (Dashboard) --&gt;</span>
+&lt;a href="profile/"&gt;Profile&lt;/a&gt;
+
+<span class="c">&lt;!-- dari /quiz1/profile/ --&gt;</span>
+&lt;a href="../tourist/"&gt;Tourist Places&lt;/a&gt;</pre>
+<div class="box">
+  <p><strong>Penting:</strong> pola URL bersih ini hanya bekerja bila website diakses melalui <em>web server</em>. Jika berkas dibuka langsung dari <em>filesystem</em> (<code>file://</code>), browser akan menampilkan daftar isi folder, bukan halaman. Karena itu disertakan <code>start.bat</code> yang menjalankan server lokal sekali klik.</p>
+</div>
+
+<h3>4.5 Konfigurasi Deploy (vercel.json)</h3>
+<p>Untuk memastikan semua URL bekerja setelah deploy, dibuat konfigurasi berikut:</p>
+<pre>{
+  "redirects": [
+    { "source": "/", "destination": "/quiz1/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/quiz1",          "destination": "/quiz1/index.html" },
+    { "source": "/quiz1/",         "destination": "/quiz1/index.html" },
+    { "source": "/quiz1/profile",  "destination": "/quiz1/profile/index.html" },
+    { "source": "/quiz1/profile/", "destination": "/quiz1/profile/index.html" }
+    ...
+  ]
+}</pre>
+<p>Bagian <code>redirects</code> mengarahkan alamat utama (halaman depan domain) ke Dashboard karena di akar proyek tidak ada <code>index.html</code>. Bagian <code>rewrites</code> memetakan setiap URL bersih ke berkas <code>index.html</code> yang sesuai, mencakup bentuk dengan dan tanpa garis miring di akhir. <em>Rewrite</em> tidak mengubah URL di bilah alamat, sehingga URL tetap bersih.</p>
+
+<!-- ============ 5 ============ -->
+<h2 class="chapter">5 &nbsp;Analisis dan Evaluasi Proyek</h2>
+
+<h3>5.1 Hasil Pengujian</h3>
+<p>Pengujian dilakukan dengan menjalankan server lokal, lalu memeriksa setiap alamat. Seluruh berkas diakses berhasil tanpa galat.</p>
+<table>
+  <tr><th style="width:44%">Alamat</th><th style="width:16%">Status</th><th>Keterangan</th></tr>
+  <tr><td><code>/quiz1/</code></td><td>200 OK</td><td>Dashboard tampil penuh</td></tr>
+  <tr><td><code>/quiz1/profile/</code></td><td>200 OK</td><td>Foto, biodata, dan tombol WhatsApp tampil</td></tr>
+  <tr><td><code>/quiz1/hometown/</code></td><td>200 OK</td><td>Deskripsi dan kartu julukan tampil</td></tr>
+  <tr><td><code>/quiz1/food/</code></td><td>200 OK</td><td>Enam kartu tampil; filter berfungsi</td></tr>
+  <tr><td><code>/quiz1/tourist/</code></td><td>200 OK</td><td>Enam kartu tampil; modal berfungsi</td></tr>
+  <tr><td><code>/quiz1/css/style.css</code></td><td>200 OK</td><td>Berkas gaya termuat</td></tr>
+  <tr><td><code>/quiz1/js/script.js</code></td><td>200 OK</td><td>Skrip termuat</td></tr>
+  <tr><td><code>/quiz1/images/profile.jpg</code></td><td>200 OK</td><td>Foto profil termuat</td></tr>
+</table>
+<p>Pengujian tampilan dilakukan pada dua lebar layar: 1440 px (desktop) dan 390 px (ponsel). Pada kedua ukuran, tidak ditemukan elemen yang saling menumpuk, teks terpotong, maupun gulir mendatar.</p>
+
+<h3>5.2 Evaluasi Tampilan Responsif</h3>
+<table>
+  <tr><th style="width:26%">Lebar</th><th style="width:22%">Kelas Bootstrap aktif</th><th>Perilaku</th></tr>
+  <tr><td>&ge; 992 px (desktop)</td><td><code>col-lg-*</code></td><td>Menu mendatar; konten 3&ndash;4 kolom</td></tr>
+  <tr><td>768&ndash;991 px (tablet)</td><td><code>col-md-*</code></td><td>Menu terlipat; konten 2&ndash;3 kolom</td></tr>
+  <tr><td>&lt; 768 px (ponsel)</td><td>satu kolom</td><td>Menu <em>hamburger</em>; konten satu kolom; tombol selebar penuh</td></tr>
+</table>
+
+<h3>5.3 Evaluasi Performa</h3>
+<p>Foto profil awalnya berukuran 2448 &times; 3264 piksel dengan ukuran berkas 1,37 MB. Angka itu terlalu berat untuk sebuah foto profil, sehingga dilakukan pemotongan dimensi (menjadi 800 &times; 1067 piksel) dan penurunan kualitas kompresi. Hasilnya berkas menyusut menjadi <strong>79 KB</strong>, atau turun sekitar <strong>94%</strong>, tanpa penurunan kualitas yang terlihat pada ukuran tampil di halaman.</p>
+<p>Selain itu, ditemukan bahwa foto asli menyimpan informasi rotasi (<em>EXIF orientation</em>) dengan nilai 8. Perkakas pengolah gambar yang mengabaikan informasi ini akan menghasilkan gambar yang miring. Masalah tersebut diatasi dengan memutar gambar terlebih dahulu sebelum diperkecil.</p>
+<p>Meski demikian, masih ada beberapa foto konten yang ukurannya cukup besar dan belum dioptimasi:</p>
+<table>
+  <tr><th style="width:44%">Berkas</th><th style="width:20%">Ukuran</th><th>Catatan</th></tr>
+  <tr><td>Madumongso.jpg</td><td>1,78 MB</td><td>Perlu dikompres</td></tr>
+  <tr><td>AlunAlun.jpg</td><td>1,04 MB</td><td>Perlu dikompres</td></tr>
+  <tr><td>TamanBantaran.jpg</td><td>786 KB</td><td>Perlu dikompres</td></tr>
+  <tr><td>TamanLaluLintas.jpg</td><td>596 KB</td><td>Perlu dikompres</td></tr>
+  <tr><td>NasiJotos.jpeg</td><td>550 KB</td><td>Perlu dikompres</td></tr>
+</table>
+<p>Total ukuran seluruh berkas proyek saat ini sekitar <strong>6 MB</strong>, dan lebih dari 90% di antaranya berasal dari folder gambar.</p>
+
+<h3>5.4 Kelebihan</h3>
+<ul>
+  <li><strong>URL bersih dan konsisten.</strong> Setiap halaman memiliki alamatnya sendiri yang mudah dibaca dan dibagikan.</li>
+  <li><strong>Kode terpusat.</strong> Satu berkas CSS dan satu berkas JavaScript dipakai seluruh halaman, sehingga pemeliharaan menjadi mudah.</li>
+  <li><strong>Responsif.</strong> Tata letak terbukti rapi pada lebar 390 px sampai 1440 px tanpa perlu pembuatan halaman terpisah untuk ponsel.</li>
+  <li><strong>Konten terpisah dari logika.</strong> Angka statistik, kategori kuliner, dan detail wisata dibaca dari atribut <code>data-*</code> di HTML, sehingga penambahan konten tidak menuntut perubahan JavaScript.</li>
+  <li><strong>Interaktif tanpa dependensi berat.</strong> Seluruh animasi dibangun hanya dengan jQuery dan CSS, tanpa kerangka kerja tambahan.</li>
+  <li><strong>Tahan gangguan.</strong> Tersedia pengaman <code>&lt;noscript&gt;</code>, teks alternatif (<code>alt</code>) pada gambar, dan favicon yang disertakan langsung sehingga tidak menimbulkan permintaan berkas yang gagal.</li>
+</ul>
+
+<h3>5.5 Kekurangan dan Usulan Perbaikan</h3>
+<table>
+  <tr><th style="width:36%">Kekurangan</th><th>Usulan perbaikan</th></tr>
+  <tr><td>Beberapa foto masih berukuran besar (hingga 1,78 MB)</td><td>Kompres seluruh foto dan ubah ke format WebP agar hemat 60&ndash;80%</td></tr>
+  <tr><td>Gambar belum memakai <code>loading="lazy"</code></td><td>Tambahkan atribut tersebut pada gambar di bawah lipatan layar untuk mempercepat muat awal</td></tr>
+  <tr><td>Isi konten ditulis langsung di HTML</td><td>Pindahkan daftar kuliner dan wisata ke berkas JSON, lalu susun kartunya dengan JavaScript agar penambahan data lebih mudah</td></tr>
+  <tr><td>Pilihan filter tidak tersimpan di URL</td><td>Simpan kategori aktif pada <em>query string</em> atau <em>hash</em> sehingga dapat dibagikan dan bertahan saat halaman dimuat ulang</td></tr>
+  <tr><td>Belum ada halaman 404 khusus</td><td>Tambahkan halaman <code>404.html</code> agar alamat yang salah tetap menampilkan navigasi website</td></tr>
+  <tr><td>Belum ada metadata berbagi</td><td>Tambahkan <em>Open Graph</em> (<code>og:title</code>, <code>og:image</code>) agar tautan tampil menarik saat dibagikan</td></tr>
+</table>
+
+<h3>5.6 Pelajaran yang Didapat</h3>
+<p>Dua hal paling berharga dari pengerjaan tugas ini. <em>Pertama</em>, pentingnya memahami perbedaan antara membuka berkas langsung (<code>file://</code>) dan mengaksesnya melalui web server &mdash; keduanya memberi hasil berbeda, dan pemahaman ini yang membuat pola URL bersih dapat bekerja. <em>Kedua</em>, sebuah kode dapat terlihat benar namun tetap salah: pemanggilan <code>.collapse()</code> pada Bootstrap 5 adalah contohnya, karena galatnya hanya muncul di konsol dan baru terasa pada perangkat mobile.</p>
+
+<!-- ============ 6 ============ -->
+<h2 class="chapter">6 &nbsp;Kesimpulan</h2>
+<p>Personal website Kota Madiun telah selesai dibangun sesuai ketentuan tugas. Kelima halaman yang diminta &mdash; Dashboard, Profile, Hometown, Local Food, dan Tourist Places &mdash; tersedia dan dapat diakses melalui struktur URL yang bersih, yaitu <code>/quiz1</code> untuk halaman utama dan <code>/quiz1/profile</code>, <code>/quiz1/hometown</code>, <code>/quiz1/food</code>, serta <code>/quiz1/tourist</code> untuk halaman lainnya.</p>
+<p>Dari sisi teknis, proyek ini menerapkan HTML semantik, gaya kustom berbasis variabel CSS, sistem grid responsif Bootstrap 5, serta manipulasi DOM dan animasi dengan jQuery. Seluruh halaman berhasil melewati pengujian pada server lokal dengan status <code>200 OK</code> dan tampil baik pada lebar layar 390 px hingga 1440 px.</p>
+<p>Proyek ini juga menghasilkan sejumlah perbaikan nyata dari proses evaluasi, antara lain penghapusan pemanggilan API jQuery yang tidak lagi tersedia di Bootstrap 5, perbaikan orientasi foto berdasarkan data EXIF, serta penurunan ukuran foto profil hingga sekitar 94%. Perbaikan yang masih terbuka &mdash; terutama pengompresan foto konten dan penyimpanan data ke berkas terpisah &mdash; telah dicatat pada Subbab 5.5 sebagai arahan pengembangan berikutnya.</p>
+<p>Secara keseluruhan, proyek ini memenuhi tujuan pembelajaran: menerapkan HTML, CSS, dan JavaScript dalam satu karya utuh, membangun antarmuka responsif, serta mempublikasikannya melalui GitHub dan layanan hosting statis.</p>
+
+<!-- ============ 7 ============ -->
+<h2 class="chapter">7 &nbsp;Lampiran</h2>
+
+<h3>7.1 Rekapitulasi Berkas</h3>
+<table>
+  <tr><th style="width:46%">Berkas</th><th style="width:16%">Baris</th><th>Keterangan</th></tr>
+  <tr><td><code>quiz1/index.html</code></td><td>127</td><td>Dashboard</td></tr>
+  <tr><td><code>quiz1/profile/index.html</code></td><td>104</td><td>Profile</td></tr>
+  <tr><td><code>quiz1/hometown/index.html</code></td><td>85</td><td>Hometown</td></tr>
+  <tr><td><code>quiz1/food/index.html</code></td><td>125</td><td>Local Food</td></tr>
+  <tr><td><code>quiz1/tourist/index.html</code></td><td>101</td><td>Tourist Places</td></tr>
+  <tr><td><code>quiz1/css/style.css</code></td><td>114</td><td>Gaya kustom seluruh halaman</td></tr>
+  <tr><td><code>quiz1/js/script.js</code></td><td>55</td><td>Skrip jQuery seluruh halaman</td></tr>
+  <tr><td><code>vercel.json</code></td><td>18</td><td>Konfigurasi routing deploy</td></tr>
+</table>
+
+<h3>7.2 Teknologi yang Digunakan</h3>
+<table>
+  <tr><th style="width:34%">Teknologi</th><th style="width:18%">Versi</th><th>Peran</th></tr>
+  <tr><td>HTML5</td><td>&mdash;</td><td>Struktur dan isi halaman</td></tr>
+  <tr><td>CSS3</td><td>&mdash;</td><td>Gaya, tata letak, dan animasi</td></tr>
+  <tr><td>JavaScript (ES5+)</td><td>&mdash;</td><td>Interaksi dan manipulasi DOM</td></tr>
+  <tr><td>jQuery</td><td>3.7.1</td><td>Penyederhanaan seleksi DOM dan animasi</td></tr>
+  <tr><td>Bootstrap</td><td>5.3.3</td><td>Grid responsif dan komponen (navbar, kartu, modal)</td></tr>
+  <tr><td>Bootstrap Icons</td><td>1.11.3</td><td>Ikon antarmuka</td></tr>
+  <tr><td>Git &amp; GitHub</td><td>&mdash;</td><td>Kendali versi dan penyimpanan kode</td></tr>
+  <tr><td>Vercel</td><td>&mdash;</td><td>Hosting statis</td></tr>
+</table>
+
+<h3>7.3 Tautan</h3>
+<ul>
+  <li>Repositori GitHub: <code>https://github.com/corneliusandika/Quiz1-WebPro</code></li>
+  <li>Alamat website (Vercel): <span class="fillme">https://.................vercel.app</span></li>
+</ul>
+
+</body>
+</html>
