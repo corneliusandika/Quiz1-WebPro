@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | My Personal Website — Kota Madiun</title>
+  <meta name="description" content="Dashboard website personal: profil, Kota Madiun, kuliner lokal, dan wisata.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:,">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="./"><i class="bi bi-person-circle me-2"></i>Hello, ¡Hola!, Ciao</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="./">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="profile/">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="hometown/">Hometown</a></li>
+          <li class="nav-item"><a class="nav-link" href="food/">Local Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="tourist/">Tourist Places</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero d-flex align-items-center">
+    <div class="container text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <span class="badge hero-badge mb-3"><i class="bi bi-geo-alt-fill me-1"></i> Kota Madiun, Jawa Timur</span>
+          <h1 class="display-4 fw-bold text-white">Halo, Saya <span class="text-accent">Cornelius Andika</span></h1>
+          <h3 class="text-white-50">Saya seorang <span id="typed" class="text-accent fw-semibold"></span><span class="cursor">|</span></h3>
+          <p class="lead text-white-50 mt-3">Selamat datang di website personal saya. Yuk kenalan sama kota asal saya <strong class="text-white">Kota Madiun</strong>, kuliner khasnya, dan tempat wisata menariknya.</p>
+          <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-4 flex-wrap">
+            <a href="profile/" class="btn btn-accent btn-lg"><i class="bi bi-person-fill me-2"></i>Lihat Profile</a>
+            <a href="tourist/" class="btn btn-outline-light btn-lg"><i class="bi bi-map me-2"></i>Jelajah Madiun</a>
+          </div>
+          <div class="d-flex gap-4 justify-content-center justify-content-lg-start mt-5">
+          </div>
+        </div>
+        <div class="col-lg-5 text-center mt-5 mt-lg-0">
+          <div class="hero-card">
+            <img src="images/profile.jpg" alt="Foto Cornelius Andika" class="hero-img">
+            <div class="hero-card-body">
+              <h5 class="fw-bold mb-1">Cornelius Andika</h5>
+              <p class="text-muted small mb-2">Mahasiswa</p>
+              <div class="d-flex gap-2 justify-content-center">
+                <a href="https://github.com/corneliusandika" class="social-btn"><i class="bi bi-github"></i></a>
+                <a href="https://instagram.com/corneliusndika" class="social-btn"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/cornelius-a-859b1732a/" class="social-btn"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#explore" class="scroll-down"><i class="bi bi-chevron-double-down"></i></a>
+  </header>
+
+  <section id="explore" class="section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-tag">Explore</span>
+        <h2>Jelajahi Website Saya</h2>
+        <p>Empat halaman utama yang bisa kamu kunjungi.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 reveal">
+          <a href="profile/" class="card preview-card h-100 d-block p-4">
+            <div class="preview-icon"><i class="bi bi-person-fill"></i></div>
+            <h5 class="fw-bold">Profile</h5>
+            <p class="text-muted small">Biodata, pendidikan, dan keahlian saya.</p>
+            <span class="text-accent fw-semibold small">Kunjungi →</span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <a href="hometown/" class="card preview-card h-100 d-block p-4">
+            <div class="preview-icon"><i class="bi bi-houses-fill"></i></div>
+            <h5 class="fw-bold">Hometown</h5>
+            <p class="text-muted small">Sekilas tentang Kota Madiun, Kota Pendekar.</p>
+            <span class="text-accent fw-semibold small">Kunjungi →</span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <a href="food/" class="card preview-card h-100 d-block p-4">
+            <div class="preview-icon"><i class="bi bi-egg-fried"></i></div>
+            <h5 class="fw-bold">Local Food</h5>
+            <p class="text-muted small">Pecel, brem, pentol corah, dan lainnya.</p>
+            <span class="text-accent fw-semibold small">Kunjungi →</span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3 reveal">
+          <a href="tourist/" class="card preview-card h-100 d-block p-4">
+            <div class="preview-icon"><i class="bi bi-map-fill"></i></div>
+            <h5 class="fw-bold">Tourist Places</h5>
+            <p class="text-muted small">Alun-alun, PSC, Bantaran Kali Madiun.</p>
+            <span class="text-accent fw-semibold small">Kunjungi →</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <h5 class="fw-bold">Cornelius Andika — Kota Madiun</h5>
+      <p class="text-white-50 small">Website personal statis • HTML • CSS • JavaScript • Bootstrap • jQuery</p>
+      <div class="d-flex gap-2 justify-content-center mb-3 flex-wrap">
+        <a href="./" class="footer-link">Dashboard</a>
+        <a href="profile/" class="footer-link">Profile</a>
+        <a href="hometown/" class="footer-link">Hometown</a>
+        <a href="food/" class="footer-link">Food</a>
+        <a href="tourist/" class="footer-link">Tourist</a>
+      </div>
+      <p class="small mb-0">&copy; <span id="year"></span> Cornelius Andika. Dibuat dengan ❤️ di Madiun.</p>
+    </div>
+  </footer>
+
+  <button id="backTop" title="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

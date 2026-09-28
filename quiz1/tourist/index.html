@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Places | My Personal Website — Kota Madiun</title>
+  <meta name="description" content="Tourist places: panduan wisata Kota Madiun.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:,">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../"><i class="bi bi-person-circle me-2"></i>Hello, ¡Hola!, Ciao</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="../profile/">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="../hometown/">Hometown</a></li>
+          <li class="nav-item"><a class="nav-link" href="../food/">Local Food</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./">Tourist Places</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <nav class="breadcrumb"><a href="../">Dashboard</a><span class="mx-2">/</span><span class="text-white">Tourist Places</span></nav>
+      <h1 class="fw-bold display-5">Wisata Kota Madiun</h1>
+      <p class="text-white-50 mb-0">Destinasi favorit untuk jalan santai, foto-foto, dan kulineran. Klik kartu untuk detail.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card place-card h-100" data-bs-toggle="modal" data-bs-target="#placeModal" data-title="Alun-alun Kota Madiun" data-desc="Alun-alun yang berada tepat di depan Balai Kota Madiun. Dilengkapi air mancur menari, area hijau luas, dan banyak pedagang kaki lima di malam hari. Cocok untuk bersantai bersama keluarga.">
+            <img src="../images/AlunAlun.jpg" alt="Alun-alun Madiun">
+            <div class="card-body"><h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-1"></i>Alun-alun Kota Madiun</h5><p class="text-muted small mb-0">Pusat kota • Air mancur menari • Kuliner malam</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card place-card h-100" data-bs-toggle="modal" data-bs-target="#placeModal" data-title="Pahlawan Street Center (PSC)" data-desc="Kawasan pedestrian di Jalan Pahlawan yang ditata modern dengan lampu hias, mural, dan deretan kafe. Ikon wisata malam dan spot foto favorit anak muda Madiun.">
+            <img src="../images/PahlawanStreetCenter.jpeg" alt="PSC Madiun">
+            <div class="card-body"><h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-1"></i>Pahlawan Street Center</h5><p class="text-muted small mb-0">Jalan Pahlawan • Spot foto • Kafe & kuliner</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card place-card h-100" data-bs-toggle="modal" data-bs-target="#placeModal" data-title="Taman Bantaran Kali Madiun" data-desc="Taman tepi sungai dengan replika patung Merlion, jembatan warna-warni, dan perahu wisata. Ramai dikunjungi sore hari untuk jogging dan piknik.">
+            <img src="../images/TamanBantaran.jpg" alt="Bantaran Kali Madiun">
+            <div class="card-body"><h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-1"></i>Taman Bantaran Kali Madiun</h5><p class="text-muted small mb-0">Tepi sungai • Merlion Madiun • Perahu wisata</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card place-card h-100" data-bs-toggle="modal" data-bs-target="#placeModal" data-title="Masjid Kuno Kuncen" data-desc="Masjid bersejarah peninggalan abad ke-16 dengan arsitektur Jawa kuno dan ukiran kayu khas. Salah satu cagar budaya tertua di Madiun.">
+            <img src="../images/MasjidKuncen.jpg" alt="Masjid Kuncen">
+            <div class="card-body"><h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-1"></i>Masjid Kuno Kuncen</h5><p class="text-muted small mb-0">Cagar budaya • Arsitektur Jawa • Wisata religi</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card place-card h-100" data-bs-toggle="modal" data-bs-target="#placeModal" data-title="Taman Lalu Lintas Bantaran" data-desc="Taman edukasi lalu lintas untuk anak-anak dengan miniatur jalan raya, rambu, dan sepeda hias. Seru untuk rekreasi keluarga di akhir pekan.">
+            <img src="../images/TamanLaluLintas.jpg" alt="Taman Lalu Lintas">
+            <div class="card-body"><h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-1"></i>Taman Lalu Lintas Bantaran</h5><p class="text-muted small mb-0">Edukasi anak • Rekreasi keluarga • Murah meriah</p></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="card place-card h-100" data-bs-toggle="modal" data-bs-target="#placeModal" data-title="Monumen & Kawasan Pendekar" data-desc="Kawasan ikon silat dengan patung pesilat dan relief perguruan PSH Terate & PSH Winongo. Simbol kebanggaan Madiun sebagai Kota Pendekar.">
+            <img src="../images/KawasanPendekar.jpg" alt="Kawasan Pendekar">
+            <div class="card-body"><h5 class="fw-bold"><i class="bi bi-geo-alt-fill text-accent me-1"></i>Kawasan Pendekar</h5><p class="text-muted small mb-0">Ikon silat • Patung pesilat • Sejarah Madiun</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="placeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title fw-bold" id="placeModalTitle">Detail Wisata</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body"><p id="placeModalDesc" class="mb-0"></p></div>
+        <div class="modal-footer"><button class="btn btn-accent" data-bs-dismiss="modal">Tutup</button></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <h5 class="fw-bold">Cornelius Andika — Kota Madiun</h5>
+      <p class="text-white-50 small">Website personal statis • HTML • CSS • JavaScript • Bootstrap • jQuery</p>
+      <div class="mb-3"><a href="../" class="footer-link">Dashboard</a><a href="../profile/" class="footer-link">Profile</a><a href="../hometown/" class="footer-link">Hometown</a><a href="../food/" class="footer-link">Food</a><a href="./" class="footer-link">Tourist</a></div>
+      <p class="small mb-0">&copy; <span id="year"></span> Cornelius Andika. Dibuat dengan ❤️ di Madiun.</p>
+    </div>
+  </footer>
+  <button id="backTop" title="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

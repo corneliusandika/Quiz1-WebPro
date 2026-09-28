@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/", "destination": "/quiz1/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/quiz1", "destination": "/quiz1/index.html" },
+    { "source": "/quiz1/", "destination": "/quiz1/index.html" },
+    { "source": "/quiz1/profile", "destination": "/quiz1/profile/index.html" },
+    { "source": "/quiz1/profile/", "destination": "/quiz1/profile/index.html" },
+    { "source": "/quiz1/hometown", "destination": "/quiz1/hometown/index.html" },
+    { "source": "/quiz1/hometown/", "destination": "/quiz1/hometown/index.html" },
+    { "source": "/quiz1/food", "destination": "/quiz1/food/index.html" },
+    { "source": "/quiz1/food/", "destination": "/quiz1/food/index.html" },
+    { "source": "/quiz1/tourist", "destination": "/quiz1/tourist/index.html" },
+    { "source": "/quiz1/tourist/", "destination": "/quiz1/tourist/index.html" }
+  ]
+}
